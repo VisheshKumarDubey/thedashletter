@@ -1,6 +1,6 @@
  //var axios = require('axios')
 let data;
-axios.get("https://dashletter-backend.herokuapp.com/login"
+axios.post("https://dashletter-backend.herokuapp.com/login"
 
 , {
    email: 'satya',
@@ -12,7 +12,7 @@ axios.get("https://dashletter-backend.herokuapp.com/login"
     console.log(response.data)
     
     console.log(response.status)
-    comnsole.log("asdfghjklkjhgfdsasdfghjklkjhgfdsasdfghjkl")
+    console.log("asdfghjklkjhgfdsasdfghjklkjhgfdsasdfghjkl")
     //console.log(response.headers['set-cookie'][0])
    }
 
