@@ -14,6 +14,7 @@
   <script type="module" src="scripts/modal.js"></script>
   <script type="module" src="scripts/index.js"></script>
   <script type="text/javascript" src="scripts/scripts.js"></script>
+  <script type="text/javascript" src="scripts/authentication_modal.js"></script>
   <!-- <link rel="stylesheet" href="../styles/debugger.css"> -->
   <link rel="stylesheet" href="styles/index.css">
 
@@ -84,18 +85,31 @@
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">Modal title</p>
-            </header>
-            <section class="modal-card-body">
+            <section class="modal-card-body custom-modal">
               <!-- Content ... -->
+              <div class="tabs is-centered is-boxed" id="tabs">
+                <ul>
+                  <li class="tab is-active" onclick="openTab(event,'signin')"><a>Sign In</a></li>
+                  <li class="tab" onclick="openTab(event,'signup')"><a>Sign Up</a></li>
+                </ul>
+              </div>
+              <div class="container section">
+                <div id="signin" class="content-tab" >
+                  <p>
+                    test1<br>
+                  Overview Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <div id="signup" class="content-tab" style="display:none">
+                    <p>
+                      test2<br>
+                    Details Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                
+            </div>
             </section>
-            <footer class="modal-card-foot">
-              <button class="button is-success">Save changes</button>
-              <button class="button">Cancel</button>
-            </footer>
           </div>
         </div>
+        
         <button id="image-modal-close" class="modal-close"></button>
       </div>
     </div>
@@ -169,27 +183,27 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Follow <strong style="color:white;">Dashletter</strong> on other platforms 
+        Follow <strong style="color:white;">Dashletter</strong> on other platforms
       </p>
       <p><a href="https://www.instagram.com/dashletter01/">
-        <span class="icon">
-          <i class="fab fa-instagram"></i> Instagram
-        </span></a>
+          <span class="icon">
+            <i class="fab fa-instagram"></i> Instagram
+          </span></a>
       </p>
       <p><a href="https://www.facebook.com/dashletter01">
-        <span class="icon">
-          <i class="fab fa-facebook"></i> facebook
-        </span></a>
+          <span class="icon">
+            <i class="fab fa-facebook"></i> facebook
+          </span></a>
       </p>
       <p>
-       Start a <strong>conversation</strong>
-       <br>
-       <u>dashletter01@gmail.com</u><br>
-       <u> IND +91 9129134369</u>
+        Start a <strong>conversation</strong>
+        <br>
+        <u>dashletter01@gmail.com</u><br>
+        <u> IND +91 9129134369</u>
       </p>
       <p>
         <br>
-        Made with  
+        Made with
         <span class="icon" style="color: red;"><i class="fas fa-heart"></i></span>
       </p>
     </div>

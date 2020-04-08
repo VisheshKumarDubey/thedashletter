@@ -18,7 +18,16 @@
   .column-reverse{
   flex-direction: row-reverse;
   }
+  .custom-modal{
+    border-radius: 5px;
+  }
+  #tab-content p {
+    display: none;
+  }
   
+  #tab-content p.is-active {
+    display: block;
+  }
  .footer{
   background-color: #000211;
  }
