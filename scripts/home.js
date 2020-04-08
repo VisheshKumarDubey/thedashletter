@@ -4,7 +4,7 @@ let data = ""
 const section = document.createElement('section');
 section.setAttribute('class', 'section');
 const container = document.createElement('div')
-container.setAttribute('class', 'container is-fluid')
+container.setAttribute('class', 'container is-mobile')
 let movie;
 //app.appendChild(logo)
 app.appendChild(section);
