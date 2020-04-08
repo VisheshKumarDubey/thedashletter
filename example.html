@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashletter: The mordern Newsletter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script type="module" src="modal.js"></script>
+  <!-- <script type="module" src="index.js"></script> -->
+  <!-- <link rel="stylesheet" href="debugger.css"> -->
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+<body>
+  <nav class="navbar shadow-remove is-transparent" id='isnav' role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+
+      <a class="navbar-item" href="https://imgbb.com/"><img src="https://i.ibb.co/H2FcfZF/send-button-1.png"
+          alt="send-button-1" border="0"></a>
+      <div class="navbar-start">
+        <a class="navbar-item is-size-4">
+          <strong>Dashletter</strong>
+        </a>
+      </div>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+
+      <div class="navbar-end">
+        <a class="navbar-item" href="home.html">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          Contact
+        </a>
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-info" id="showModal">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light" id="showModal1">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+
+    </div>
+    </div>
+  </nav>
+  <div class="container" id="app">
+    <div id="image-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save changes</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+      </div>
+      <button id="image-modal-close" class="modal-close"></button>
+    </div>
+  </div>
+  <div class="columns">
+
+    <section class=" column is-full hero hero1 is-fullheight">
+      <div class="hero-body">
+        <div class="container welcome-text">
+          <h1 class="title">
+            Inbox Zero Experience!
+          </h1>
+          <h2 class="subtitle">
+            With supporting text below as a natural<br /> lead-in to additional content.
+          </h2>
+          <a href="home.html" class="button is-info is-outlined">Try Now!</a>
+        </div>
+      </div>
+    </section>
+    <section class="section column nohero">
+      <div class="container is-fluid">
+        <div class="columns">
+          <img src="hero_image.svg" width="300px" height="300px" class="column is-half">
+          <p class="column is-half">Hello</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <div>Visheshsh</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+</body>
+
+</html>

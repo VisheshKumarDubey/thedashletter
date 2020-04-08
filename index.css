@@ -1,0 +1,28 @@
+.shadow-remove {
+    background-color: rgba(0, 0, 0, 0.0);
+    z-index: 1;
+    box-shadow: 0 0 0 0;
+    z-index: 11;
+  }
+
+  .hero1 {
+    background: url(hero_image.svg);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  @media (max-width: 1024px) {
+    .hero1 {
+      /* background: url(images/hero-2.jpg) center / cover; */
+      
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero1 {
+      /* background: url(images/hero-3.jpg) center / cover; */
+     
+    }
+  }
