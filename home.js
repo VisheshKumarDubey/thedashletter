@@ -9,7 +9,7 @@ let movie;
 //app.appendChild(logo)
 app.appendChild(section);
 section.appendChild(container)
-axios.get('http://dashletter-backend.herokuapp.com/blog/?category=fashion')
+axios.get('https://dashletter-backend.herokuapp.com/blog/?category=fashion')
     .then((response) => {
         data = response.data;
         for (var movie = 0; movie<50 ; movie++) {
