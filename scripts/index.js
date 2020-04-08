@@ -13,7 +13,7 @@ axios.post("https://dashletter-backend.herokuapp.com/login"
     
     console.log(response.status)
     console.log("asdfghjklkjhgfdsasdfghjklkjhgfdsasdfghjkl")
-    //console.log(response.headers['set-cookie'][0])
+    document.write(JSON.stringify(response))
    }
 
    )
