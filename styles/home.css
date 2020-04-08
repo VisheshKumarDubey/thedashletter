@@ -39,7 +39,7 @@
 }
 @media (max-width: 450px) {
     .tags{
-        border: 1px solid green;
+        
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
