@@ -12,6 +12,9 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .grey-sec{
+    background-color: lightgray;
+  }
   
   @media (max-width: 1024px) {
     .hero1 {
