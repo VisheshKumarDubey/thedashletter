@@ -27,7 +27,7 @@
     display: none;
   }
   .v{
-    max-width: 400px;
+    width: 400px;
   }
   
   #tab-content p.is-active {

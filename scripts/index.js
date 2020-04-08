@@ -1,6 +1,6 @@
  //var axios = require('axios')
 let data;
-axios.post("https://dashletter-backend.herokuapp.com/login"
+axios.post("http://dashletter-backend.herokuapp.com/login"
 
 , {
    email: 'satya',
@@ -9,11 +9,11 @@ axios.post("https://dashletter-backend.herokuapp.com/login"
 )
    .then((response) => {
       
-    console.log(response.data)
+    console.log(response)
     
     console.log(response.status)
     console.log("asdfghjklkjhgfdsasdfghjklkjhgfdsasdfghjkl")
-    document.write(JSON.stringify(response))
+   //document.write(JSON.stringify(response))
    }
 
    )
