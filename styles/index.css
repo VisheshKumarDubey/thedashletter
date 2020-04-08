@@ -19,16 +19,6 @@
   flex-direction: row-reverse;
   }
   
-  @media (max-width: 1024px) {
-    .hero1 {
-      /* background: url(images/hero-2.jpg) center / cover; */
-      
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero1 {
-      /* background: url(images/hero-3.jpg) center / cover; */
-     
-    }
-  }
+ .footer{
+  background-color: #000211;
+ }
