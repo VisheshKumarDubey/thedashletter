@@ -94,22 +94,19 @@
             <ul>
               <li class="tab is-active" onclick="openTab(event,'Login')">
                 <a>
-                  <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-                  <span>Pictures</span>
+                  <span class="icon is-small"><i class="fas fa-user-plus"></i></span>
+                  <span>SignUp</span>
                 </a>
               </li>
               <li class="tab" onclick="openTab(event,'Signup')">
                 <a>
-                  <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-                  <span>Music</span>
+                  <span class="icon is-small"><i class="far fa-user"></i></span>
+                  <span>Login</span>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="container section" style=" padding-top:0;width: inherit; height:85%;border-left: 1px solid grey;
-          border-right: 1px solid grey;
-          border-bottom: 1px solid grey;
-           overflow-y: scroll;">
+          <div class="container section" style=" padding-top:0px;width: inherit; height:82%;overflow-y: auto;">
             <div id="Login" class="content-tab">
               <div class="field">
                 <label class="label">Name</label>
@@ -121,21 +118,21 @@
               <div class="field">
                 <label class="label">Username</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                  <input class="input" type="text" placeholder="Your name Please ..">
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
                   <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
+                    <i class="fas fa-check" style="display: none;"></i>
                   </span>
                 </div>
-                <p class="help is-success">This username is available</p>
+                <p class="help" style="display: none;">This username is available</p>
               </div>
 
               <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                  <input class="input" type="email" placeholder="hello@dashletter.com">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
@@ -143,20 +140,30 @@
                     <i class="fas fa-exclamation-triangle"></i>
                   </span>
                 </div>
-                <p class="help is-danger">This email is invalid</p>
+                <p class="help is-danger" style="display: none;">This email is invalid</p>
               </div>
-
               <div class="field">
-                <label class="label">Subject</label>
+                <label class="label">Birthday</label>
+                <div class="control">
+                  <div class="date">
+                    <input class="input" type="date" placeholder="hello@dashletter.com">
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Gender</label>
                 <div class="control">
                   <div class="select">
                     <select>
-                      <option>Select dropdown</option>
-                      <option>With options</option>
+                      <option>Choose</option>
+                      <option><strong>Male</strong></option>
+                      <option><strong>Female</strong></option>
+                      <option><strong>Rather not Say</strong></option>
                     </select>
                   </div>
                 </div>
               </div>
+
 
 
               <div class="field">
@@ -167,12 +174,13 @@
                   </label>
                 </div>
               </div>
-              <div class="field is-grouped">
+
+              <div class="field is-grouped is-grouped-centered">
                 <div class="control">
                   <button class="button is-link">Submit</button>
                 </div>
                 <div class="control">
-                  <button class="button is-link is-light">Cancel</button>
+                  <button class="button is-danger ">Cancel</button>
                 </div>
               </div>
             </div>

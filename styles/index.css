@@ -1,3 +1,14 @@
+
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 .shadow-remove {
     background-color: rgba(0, 0, 0, 0.0);
     z-index: 1;
@@ -20,6 +31,7 @@
   }
   .custom-modal{
     border-radius: 5px;
+    padding-bottom: 0;
   }
   #tab-content p {
     display: none;
@@ -27,7 +39,12 @@
   .v{
     width: 400px;
   }
+  .tab{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  }
   
+
   #tab-content p.is-active {
     display: block;
   }
