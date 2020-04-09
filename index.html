@@ -88,9 +88,9 @@
           
           <button id = "image-modal-close" class="delete" aria-label="close"></button>
         </header> -->
-        <section class="modal-card-body">
+        <section class="modal-card-body custom-modal" style="overflow: hidden;">
           <!-- Content ... -->
-          <div class="tabs is-centered is-boxed" >
+          <div class="tabs is-centered is-boxed">
             <ul>
               <li class="tab is-active" onclick="openTab(event,'Login')">
                 <a>
@@ -106,7 +106,10 @@
               </li>
             </ul>
           </div>
-          <div class="container section" style="width: inherit; height:90%; background-color: rgb(255, 255, 248); overflow-y: scroll;">
+          <div class="container section" style=" padding-top:0;width: inherit; height:85%;border-left: 1px solid grey;
+          border-right: 1px solid grey;
+          border-bottom: 1px solid grey;
+           overflow-y: scroll;">
             <div id="Login" class="content-tab">
               <div class="field">
                 <label class="label">Name</label>
@@ -114,7 +117,7 @@
                   <input class="input" type="text" placeholder="Text input">
                 </div>
               </div>
-              
+
               <div class="field">
                 <label class="label">Username</label>
                 <div class="control has-icons-left has-icons-right">
@@ -128,7 +131,7 @@
                 </div>
                 <p class="help is-success">This username is available</p>
               </div>
-              
+
               <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
@@ -142,7 +145,7 @@
                 </div>
                 <p class="help is-danger">This email is invalid</p>
               </div>
-              
+
               <div class="field">
                 <label class="label">Subject</label>
                 <div class="control">
@@ -155,7 +158,7 @@
                 </div>
               </div>
 
-              
+
               <div class="field">
                 <div class="control">
                   <label class="checkbox">
@@ -164,20 +167,6 @@
                   </label>
                 </div>
               </div>
-              
-              <div class="field">
-                <div class="control">
-                  <label class="radio">
-                    <input type="radio" name="question">
-                    Yes
-                  </label>
-                  <label class="radio">
-                    <input type="radio" name="question">
-                    No
-                  </label>
-                </div>
-              </div>
-              
               <div class="field is-grouped">
                 <div class="control">
                   <button class="button is-link">Submit</button>
