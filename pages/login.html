@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashletter: The mordern Newsletter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<body style="text-align:center;">
+  <h1 style="color:green;">
+    GeeksForGeeks
+  </h1>
 
-    <!-- <script type="module" src="../scripts/modal.js"></script> -->
-    <button type="button" class="button is-danger" onclick="validateForm()">Logout</button>
+  <h2>
+    Text value property
+  </h2>
 
-</head>
+  <p>
+    Change the text of the text
+    field, and then click the button below.
+  </p>
 
-<body>
-    
-    <script>
-        function validateForm() {
-            
-        
-        axios.get("http://dashletter-backend.herokuapp.com/logout"
+  Name:
+  <input type="text" id="myText" value="Mickey">
 
-            // , {
-            //     email: x,
-            //     password: y
-            // }
-        )
-            .then((response) => {
-                console.data(response.data)
-                console.log(response.status)
-                console.log("asdfghjklkjhgfdsasdfghjklkjhgfdsasdfghjkl")
-                //document.write(JSON.stringify(response))
-            }
+  <button type="button" onclick="myFunction(1)">
+    Try it
+  </button>
 
-            )
-            .catch((err) => console.log("Something went wrong!", err));
+  <p id="demo"></p>
 
-        }
-    </script>
+  <script>
+    // Here the value is stored in new variable x  
+
+    function myFunction(y) {
+      console.log(y)
+      var x =
+        document.getElementById("myText").value;
+
+      document.getElementById(
+        "demo").innerHTML = x;
+    } 
+  </script>
 </body>
 
 </html>

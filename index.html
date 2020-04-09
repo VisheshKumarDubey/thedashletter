@@ -80,31 +80,133 @@
     </div>
     </div>
 
-    <div class="container" id="app">
-      <div id="image-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content v">
-          <div class="modal-card">
-            <section class="modal-card-body custom-modal">
-              <!-- Content ... -->
-              <div class="tabs is-centered is-boxed" id="tabs">
-                <ul>
-                  <li class="tab is-active" onclick="openTab(event,'signin')"><a>Sign In</a></li>
-                  <li class="tab" onclick="openTab(event,'signup')"><a>Sign Up</a></li>
-                </ul>
-              </div>
-              <div class="container section">
-                <div id="signin" class="content-tab" >
-                  </div>
-                <div id="signup" class="content-tab" style="display:none">
-                    </div>
-                
-            </div>
-            </section>
+    <div id="image-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card" style="width: 450px;height: 95%;">
+        <!-- <header class="modal-card-head" style = "background-color: rgb(238, 255, 0);">
+          <p class="modal-card-title">Modal title</p>
+          
+          <button id = "image-modal-close" class="delete" aria-label="close"></button>
+        </header> -->
+        <section class="modal-card-body">
+          <!-- Content ... -->
+          <div class="tabs is-centered is-boxed" >
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'Login')">
+                <a>
+                  <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                  <span>Pictures</span>
+                </a>
+              </li>
+              <li class="tab" onclick="openTab(event,'Signup')">
+                <a>
+                  <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+                  <span>Music</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-        
-        <button id="image-modal-close" class="modal-close"></button>
+          <div class="container section" style="width: inherit; height:90%; background-color: rgb(255, 255, 248); overflow-y: scroll;">
+            <div id="Login" class="content-tab">
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Text input">
+                </div>
+              </div>
+              
+              <div class="field">
+                <label class="label">Username</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+                <p class="help is-success">This username is available</p>
+              </div>
+              
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p class="help is-danger">This email is invalid</p>
+              </div>
+              
+              <div class="field">
+                <label class="label">Subject</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Select dropdown</option>
+                      <option>With options</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    I agree to the <a href="#">terms and conditions</a>
+                  </label>
+                </div>
+              </div>
+              
+              <div class="field">
+                <div class="control">
+                  <label class="radio">
+                    <input type="radio" name="question">
+                    Yes
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="question">
+                    No
+                  </label>
+                </div>
+              </div>
+              
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Cancel</button>
+                </div>
+              </div>
+            </div>
+            <div id="Signup" class="content-tab" style="display:none">
+              <p>
+                test2<br>
+                Overview Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged. It was popularised in the 1960s with the release
+                of Letraset sheets containing Lorem Ipsum passages, and more recently
+                with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum.</p>
+            </div>
+
+          </div>
+        </section>
+        <!-- <footer class="modal-card-foot">
+          <button class="button is-success">Save changes</button>
+          <button class="button">Cancel</button>
+        </footer> -->
       </div>
     </div>
 
