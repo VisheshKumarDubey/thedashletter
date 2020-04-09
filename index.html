@@ -81,7 +81,9 @@
     </div>
 
     <div id="image-modal" class="modal">
-      <div class="modal-background"></div>
+      <div class="modal-background">
+        <button class="modal-close is-large" aria-label="close" id="image-modal-close"></button>
+      </div>
       <div class="modal-card" style="width: 450px;height: 95%;">
         <!-- <header class="modal-card-head" style = "background-color: rgb(238, 255, 0);">
           <p class="modal-card-title">Modal title</p>
@@ -238,7 +240,7 @@
                   <button class="button is-link">LogIn</button>
                 </div>
                 <div class="control">
-                  <button class="button is-danger ">Cancel</button>
+                  <button id="modal-close1" onclick="() => " class="button is-danger">Cancel</button>
                 </div>
               </div>
             </div>

@@ -1,3 +1,4 @@
+// navigaton burger icon
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements

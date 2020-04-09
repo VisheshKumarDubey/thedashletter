@@ -4,12 +4,12 @@ let data = ""
 const section = document.createElement('section');
 section.setAttribute('class', 'section');
 const container = document.createElement('div')
-container.setAttribute('class', 'container is-mobile')
+container.setAttribute('class', 'container is-desktop')
 let movie;
 //app.appendChild(logo)
 app.appendChild(section);
 section.appendChild(container)
-axios.get('https://dashletter-backend.herokuapp.com/blog/?category=fashion')
+axios.get('https://dashletter-backend.herokuapp.com/blog/?category=fashion&sp=0&ep=100')
     .then((response) => {
         data = response.data;
         for (var movie = 0; movie<50 ; movie++) {
