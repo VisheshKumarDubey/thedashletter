@@ -108,15 +108,9 @@
           </div>
           <div class="container section" style=" padding-top:0px;width: inherit; height:82%;overflow-y: auto;">
             <div id="Login" class="content-tab">
-              <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Text input">
-                </div>
-              </div>
 
               <div class="field">
-                <label class="label">Username</label>
+                <label class="label">Name</label>
                 <div class="control has-icons-left has-icons-right">
                   <input class="input" type="text" placeholder="Your name Please ..">
                   <span class="icon is-small is-left">
@@ -146,9 +140,35 @@
                 <label class="label">Birthday</label>
                 <div class="control">
                   <div class="date">
-                    <input class="input" type="date" placeholder="hello@dashletter.com">
+                    <input class="input" type="date" placeholder="dd-mm--yyyy">
                   </div>
                 </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check" style="display: none;"></i>
+                  </span>
+                </div>
+                <p class="help" style="display: none;">This username is available</p>
+              </div>
+              <div class="field">
+                <label class="label">Re-type Password</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="password" placeholder="Retype Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check" style="display: none;"></i>
+                  </span>
+                </div>
+                <p class="help" style="display: none;">This username is available</p>
               </div>
               <div class="field">
                 <label class="label">Gender</label>
@@ -185,17 +205,42 @@
               </div>
             </div>
             <div id="Signup" class="content-tab" style="display:none">
-              <p>
-                test2<br>
-                Overview Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only
-                five centuries, but also the leap into electronic typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release
-                of Letraset sheets containing Lorem Ipsum passages, and more recently
-                with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum.</p>
+              
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="hello@dashletter.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                </div>
+                <p class="help is-danger" style="display: none;">This email is invalid</p>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check" style="display: none;"></i>
+                  </span>
+                </div>
+                <p class="help" style="display: none;">This username is available</p>
+              </div>
+
+              <div class="field is-grouped is-grouped-centered">
+                <div class="control">
+                  <button class="button is-link">LogIn</button>
+                </div>
+                <div class="control">
+                  <button class="button is-danger ">Cancel</button>
+                </div>
+              </div>
             </div>
 
           </div>
