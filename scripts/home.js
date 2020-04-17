@@ -16,6 +16,8 @@ section.setAttribute('class', 'section');
 let container = document.createElement('div')
 container.setAttribute('class', 'container is-desktop')
 
+loaderAlign();
+
 async function xyz() {
 
     const tagni = await axios.get('https://dashletter-backend.herokuapp.com/blog/?category=allcategory')
