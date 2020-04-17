@@ -1,6 +1,7 @@
 const taggy = document.getElementById('tagg')
 const app = document.getElementById('root')
 const tagu = document.createElement('div')
+const loading = document.getElementById('loadIndicator')
 tagu.setAttribute('class', 'tags')
 taggy.appendChild(tagu)
 
@@ -45,9 +46,9 @@ async function xyz() {
     document.querySelectorAll('.tag').forEach(item => {
         item.addEventListener('click', event => {
             //handle click
-            var c  = "";
-            c=item.id;
-            c=c.split("t")[1];
+            var c = "";
+            c = item.id;
+            c = c.split("t")[1];
             sp = 0; ep = 50;
             current_url = taglist[c].url;
             loadmore(current_url, 0, sp, ep)
@@ -73,7 +74,24 @@ const quoteRemover = (text) => {
     return text;
 }
 
-
+function dw_getWindowDims() {
+    var doc = document, w = window;
+    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+            doc.documentElement: doc.body;
+    
+    var width = docEl.clientWidth;
+    var height = docEl.clientHeight;
+    
+    // mobile zoomed in?
+    if ( w.innerWidth && width > w.innerWidth ) {
+        width = w.innerWidth;
+        height = w.innerHeight;
+    }
+    
+    return {width: width, height: height};
+}
+const loaderAlign = () =>
+loading.style.margin = ` ${dw_getWindowDims().height/2-50}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
 
 //Content Loading
 
@@ -84,15 +102,20 @@ function loadmore(url, g, s, e) {
         container.setAttribute('class', 'container is-desktop')
         section.appendChild(container);
     }
+    loading.style.display ='block';
+    loaderAlign();
     app.appendChild(section);
     section.appendChild(container)
     axios.get(url + '&sp=' + s + '&ep=' + e)
         .then((response) => {
+            if(response!=null)
+            {
+                loading.style.display ='none';
+            }
             data = response.data;
             let movie;
             for (movie in data) {
                 const a = document.createElement('a')
-                
                 a.setAttribute('href', quoteRemover(JSON.stringify(data[movie].url)))
                 a.setAttribute('target', "_blank")
 
@@ -109,6 +132,7 @@ function loadmore(url, g, s, e) {
 
                 let image = quoteRemover(JSON.stringify(data[movie].urlToImage))
                 img.setAttribute('src', image)
+                img.setAttribute('onerror', 'this.src=\"../assets/thumbnail.jpg\"')
 
                 const card_content = document.createElement('div')
                 card_content.setAttribute('class', 'card-content')
@@ -130,8 +154,15 @@ function loadmore(url, g, s, e) {
 
                 const div_content = document.createElement('div')
                 div_content.setAttribute('class', 'content')
-                data[movie].content = quoteRemover(JSON.stringify(data[movie].content).substring(0, 300))
-                div_content.textContent = `${data[movie].content}<a>read more...</a>`
+                if (data[movie].content == null)
+
+                    continue;
+
+                data[movie].content = quoteRemover(JSON.stringify(data[movie].content)).substring(0, 75)
+                div_content.textContent = `${data[movie].content} ...`
+
+
+
 
                 container.appendChild(a)
                 a.appendChild(card)
@@ -146,13 +177,13 @@ function loadmore(url, g, s, e) {
                 card_content.appendChild(div_content)
 
             }
-            sp = sp+ 50;
-            ep = ep+50;
+            sp = sp + 50;
+            ep = ep + 50;
         }, (error) => {
             console.log(error);
 
         });
-    
+
 }
 
 
