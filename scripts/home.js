@@ -16,7 +16,7 @@ section.setAttribute('class', 'section');
 let container = document.createElement('div')
 container.setAttribute('class', 'container is-desktop')
 
-loaderAlign();
+
 
 async function xyz() {
 
@@ -96,7 +96,7 @@ const loaderAlign = () =>
 loading.style.margin = ` ${dw_getWindowDims().height/2-70}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
 
 //Content Loading
-
+loaderAlign();
 function loadmore(url, g, s, e) {
     if (g == 0) {
         section.removeChild(container)
