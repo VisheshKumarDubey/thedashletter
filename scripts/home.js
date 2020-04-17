@@ -91,7 +91,7 @@ function dw_getWindowDims() {
     return {width: width, height: height};
 }
 const loaderAlign = () =>
-loading.style.margin = ` ${dw_getWindowDims().height/2-50}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
+loading.style.margin = ` ${dw_getWindowDims().height/2-70}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
 
 //Content Loading
 
