@@ -12,10 +12,17 @@
     <link rel="stylesheet" href="../styles/home.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script type="text/javascript" src="../scripts/scripts.js"></script>
+    <script type="module" src="../scripts/scripts.js"></script>
+    <script>
+        function loader(id)
+      {
+          console.log("hey")
+          jai(id)
+      }</script>
     <script type="module" src="../scripts/home.js"></script>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script type="module" src="../scripts/home.js"></script>
 
 <body>
     <nav class="navbar" id='isnav' role="navigation" aria-label="main navigation">
@@ -64,8 +71,10 @@
         </div>
         </div>
     </nav>
-    <div class="tag-contain">
-        <div class="tags ">
+    
+   
+    <div class="tag-contain" id="tagg">
+        <!-- <div class="tags ">
             <span class="tag is-rounded">One</span>
             <span class="tag is-rounded">Two</span>
             <span class="tag is-rounded">Three</span>
@@ -86,13 +95,13 @@
             <span class="tag is-rounded">Eighteen</span>
             <span class="tag is-rounded">Nineteen</span>
             <span class="tag is-rounded">Twenty</span>
-        </div>
+        </div> -->
     </div>
     <div id="root">
     </div>
     <div class="columns is-centered is-mobile">
         <div class="column is-half is-centered" style="width: fit-content;">
-            <button class="button is-large is-info"  id='loadMore' >Load More</button>
+            <button class="button is-large is-info" id='loadMore'>Load More</button>
         </div>
     </div>
     <footer class="footer">
