@@ -2,6 +2,28 @@ const taggy = document.getElementById('tagg')
 const app = document.getElementById('root')
 const tagu = document.createElement('div')
 const loading = document.getElementById('loadIndicator')
+const foot = document.getElementById('foot')
+foot.style.display='none'
+
+function dw_getWindowDims() {
+    var doc = document, w = window;
+    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+            doc.documentElement: doc.body;
+    
+    var width = docEl.clientWidth;
+    var height = docEl.clientHeight;
+    
+    // mobile zoomed in?
+    if ( w.innerWidth && width > w.innerWidth ) {
+        width = w.innerWidth;
+        height = w.innerHeight;
+    }
+    
+    return {width: width, height: height};
+}
+const loaderAlign = () =>
+loading.style.margin = ` ${dw_getWindowDims().height/2-70}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
+loaderAlign()
 tagu.setAttribute('class', 'tags')
 taggy.appendChild(tagu)
 
@@ -15,8 +37,6 @@ let section = document.createElement('section');
 section.setAttribute('class', 'section');
 let container = document.createElement('div')
 container.setAttribute('class', 'container is-desktop')
-
-
 
 async function xyz() {
 
@@ -45,9 +65,14 @@ async function xyz() {
         tagu.appendChild(tagme)
 
     }
+    let active = document.querySelectorAll('.tag')[0];
+    active.setAttribute('class','tag is-rounded is-info')
     document.querySelectorAll('.tag').forEach(item => {
         item.addEventListener('click', event => {
             //handle click
+            active.setAttribute('class','tag is-rounded')
+            item.setAttribute('class','tag is-rounded is-info')
+            active = item;
             var c = "";
             c = item.id;
             c = c.split("t")[1];
@@ -64,6 +89,7 @@ async function xyz() {
 //LoadMore Button function
 
 var loadMore = document.querySelector('#loadMore');
+loadMore.style.display = 'none'
 loadMore.addEventListener('click', function () {
     loadmore(current_url, 1, sp, ep);
 });
@@ -73,30 +99,14 @@ loadMore.addEventListener('click', function () {
 const quoteRemover = (text) => {
     text = text.replace('\"', '')
     text = text.replace('\"', '')
+    text = text.replace('\r', '')
+    text = text.replace('\n', '')
     return text;
 }
 
-function dw_getWindowDims() {
-    var doc = document, w = window;
-    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
-            doc.documentElement: doc.body;
-    
-    var width = docEl.clientWidth;
-    var height = docEl.clientHeight;
-    
-    // mobile zoomed in?
-    if ( w.innerWidth && width > w.innerWidth ) {
-        width = w.innerWidth;
-        height = w.innerHeight;
-    }
-    
-    return {width: width, height: height};
-}
-const loaderAlign = () =>
-loading.style.margin = ` ${dw_getWindowDims().height/2-70}px ${0}px ${0}px ${dw_getWindowDims().width/2-50}px`;
 
 //Content Loading
-loaderAlign();
+
 function loadmore(url, g, s, e) {
     if (g == 0) {
         section.removeChild(container)
@@ -105,6 +115,8 @@ function loadmore(url, g, s, e) {
         section.appendChild(container);
     }
     loading.style.display ='block';
+    loadMore.style.display = 'none'
+   
     loaderAlign();
     app.appendChild(section);
     section.appendChild(container)
@@ -113,6 +125,8 @@ function loadmore(url, g, s, e) {
             if(response!=null)
             {
                 loading.style.display ='none';
+                foot.style.display='block'
+                loadMore.style.display = 'block'
             }
             data = response.data;
             let movie;
@@ -151,11 +165,11 @@ function loadmore(url, g, s, e) {
                 p_title.textContent = data[movie].title
 
                 const p_subtitle = document.createElement('p')
-                p_subtitle.setAttribute('class', 'titly subtitle is-7')
+                p_subtitle.setAttribute('class', 'titl subtitle is-7')
                 p_subtitle.textContent = `source: ${quoteRemover(JSON.stringify(data[movie].source.name))}`
 
                 const div_content = document.createElement('div')
-                div_content.setAttribute('class', 'content')
+                div_content.setAttribute('class', 'titly content')
                 if (data[movie].content == null)
 
                     continue;

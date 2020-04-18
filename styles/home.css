@@ -1,6 +1,27 @@
+@font-face {
+    font-family: literata;
+    src: url('../assets/static/Literata-Bold.ttf');
+  }
+  @font-face {
+    font-family: literatalight;
+    src: url('../assets/static/Literata-Regular.ttf');
+  }
+  @font-face {
+    font-family: literatalightest;
+    src: url('../assets/static/Literata-Medium.ttf');
+  }
 #root{
-min-height: 800px;
 }
+.titly{
+    font-family: literatalightest;
+}
+.titl{
+    font-family: literatalightest;
+}
+.content{
+    font-family: literatalight;
+}
+
 .tag-contain{
     padding: 10px;
 }

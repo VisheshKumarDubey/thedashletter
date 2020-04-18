@@ -25,26 +25,29 @@ const signup = (email, pasword) => {
     return result;
 }
 
-const login = (email, pasword) => {
+(async function(){
+ const login = (email, pasword) => {
     let result;
     const credentials = {
         email: email,
         password: pasword
     }
-    axios.post(URL + "login", credentials).then((response) => {
+     axios.post(URL + "login", credentials).then((response) => {
 
         console.log(response);
         console.log(response.status);
         result = response.status;
+        return response.data;
     }
 
     )
         .catch((err) => console.log("Something went wrong!", err));
 
 
-    return result;
+  
 
 }
+})()
 
 const logout = () => {
     let result;
@@ -79,3 +82,4 @@ const sessionStorage = (key, value, opt) => {
             console.log('0 -> Set Data; 1 -> Get Data; 2 -> Remove Data')
     }
 }
+
